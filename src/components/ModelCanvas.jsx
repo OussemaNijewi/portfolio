@@ -1,27 +1,13 @@
 import { Environment, OrbitControls, useGLTF } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { useRef } from "react";
 
 const Model = ({ model }) => {
   const scene = useGLTF(model.modelPath);
   const groupRef = useRef();
 
-  const [scale, setScale] = useState(model.scale || 1);
-
   return (
-    <group
-      ref={groupRef}
-      scale={scale}
-      rotation={model.rotation}
-      onWheel={(e) => {
-        e.stopPropagation();
-
-        setScale((prev) => {
-          const next = prev + e.deltaY * -0.001;
-          return Math.min(Math.max(next, 0.3), 5); // clamp
-        });
-      }}
-    >
+    <group ref={groupRef} scale={model.scale || 1} rotation={model.rotation}>
       <primitive object={scene.scene} />
     </group>
   );
