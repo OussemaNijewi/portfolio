@@ -1,5 +1,3 @@
-import { exp } from "three/tsl";
-
 const words = [
   { text: "Qt", imgPath: "/images/Qt.svg" },
   { text: "Unreal Engine", imgPath: "/images/UnrealEngine.svg" },
