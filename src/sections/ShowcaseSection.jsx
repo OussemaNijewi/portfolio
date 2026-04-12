@@ -77,7 +77,7 @@ const AppShowcase = () => {
             </div>
           </div>
 
-          <div className="project-list-wrapper overflow-hidden">
+          <div className="project-list-wrapper overflow-hidden pb-6">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img

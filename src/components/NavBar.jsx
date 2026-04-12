@@ -41,12 +41,6 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
-
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
       </div>
     </header>
   );

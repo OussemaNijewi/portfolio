@@ -13,21 +13,56 @@ const words = [
 
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
-  },
-  {
-    name: "Experience",
+    name: "Work Experience",
     link: "#experience",
   },
   {
-    name: "Skills",
-    link: "#skills",
+    name: "Projects",
+    link: "#work",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Contact me",
+    link: "#contact",
   },
 ];
 
-export { words, navLinks };
+const logoIconsList = [
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+  },
+  {
+    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+  },
+];
+
+export { words, navLinks, logoIconsList };
