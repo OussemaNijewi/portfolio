@@ -65,9 +65,9 @@ const AppShowcase = () => {
               >
                 <h2 className="mb-4">Gym Insights</h2>
                 <p className="text-black md:text-xl mb-2">
-                  a real-time traffic and equipment status tracker for
-                  university of Ottawa Gym Facilities (electron desktop app +
-                  react native mobile app)
+                  a real-time traffic and equipment status tracker for the
+                  University of Ottawa Gym Facilities (electron desktop app,
+                  react native app)
                 </p>
 
                 <span className="absolute left-0 -bottom-6 text-sm text-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

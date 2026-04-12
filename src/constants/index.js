@@ -11,4 +11,23 @@ const words = [
   { text: "Jira", imgPath: "/images/atlassian_jira-icon.svg" },
 ];
 
-export { words };
+const navLinks = [
+  {
+    name: "Work",
+    link: "#work",
+  },
+  {
+    name: "Experience",
+    link: "#experience",
+  },
+  {
+    name: "Skills",
+    link: "#skills",
+  },
+  {
+    name: "Testimonials",
+    link: "#testimonials",
+  },
+];
+
+export { words, navLinks };
