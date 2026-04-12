@@ -1,7 +1,7 @@
-# 💻 Portfolio Website — Your Name
+# 💻 Portfolio Website — Oussema Nijewi
 
 Welcome to my personal portfolio website!  
-I’m a **Software Engineering student / new graduate** passionate about building scalable systems, clean user experiences, and impactful software.
+I’m a **new graduate / Software Engineering student /** passionate about building scalable systems, clean user experiences, and impactful software.
 
 This website showcases my projects, skills, and experience.
 
