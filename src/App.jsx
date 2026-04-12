@@ -1,5 +1,11 @@
+import Hero from "./sections/Hero";
+
 const App = () => {
-  return <div className="text-3xl">Initial Setup</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default App;

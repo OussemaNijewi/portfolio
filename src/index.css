@@ -81,7 +81,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 xl:mt-2 mt-2 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
   }
 
   .hero-text {
@@ -327,12 +327,14 @@ section {
   display: inline-block;
   flex-direction: column;
   transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+  margin-left: -12px;
+  height: 48px;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.03, 0.99);
 }
 
 @keyframes wordSlider {
@@ -470,4 +472,16 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+.hero-title {
+  @apply text-[38px] md:text-[30px] font-bold leading-tight text-black-100;
+}
+
+.hero-body {
+  @apply text-[20px] md:text-[20px] font-bold leading-relaxed text-black-200 max-w-xl;
+}
+
+.hero-subtext {
+  @apply text-sm md:text-lg text-black-200 mt-2;
 }
