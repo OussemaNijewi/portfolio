@@ -217,7 +217,7 @@ section {
 
     .text {
       @apply uppercase md:text-lg text-black transition-all duration-500
-        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+        group-hover:text-black group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
     }
 
     .arrow-wrapper {
@@ -239,15 +239,15 @@ section {
   }
 
   .timeline-wrapper {
-    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+    @apply absolute top-0 xl:left-[36.7vw] md:left-10 left-8 h-full flex justify-center;
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[110%] -top-10 w-28 md:w-28 bg-white;
   }
 
   .timeline-logo {
-    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
+    @apply md:size-25 size-18 flex-none rounded-full flex justify-center items-center md:-translate-y-7;
   }
 
   .exp-card-wrapper {
@@ -259,14 +259,14 @@ section {
   }
 
   .tech-card-animated-bg {
-    @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+    @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#ffffff] group-hover:bottom-0 transition-all duration-700;
   }
 
   .tech-card-content {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
+      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-black text-center;
     }
   }
 
@@ -280,7 +280,7 @@ section {
 
   form {
     label {
-      @apply block text-white-50 mb-2;
+      @apply block text-black mb-2;
     }
 
     input,
@@ -370,7 +370,7 @@ section {
   width: 2px;
   background: linear-gradient(
     0deg,
-    rgba(69, 222, 196, 0) 0%,
+    rgba(255, 255, 255, 0) 0%,
     #62e0ff 25%,
     #52aeff 37.51%,
     #fd5c79 62.83%,

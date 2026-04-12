@@ -55,7 +55,7 @@ const Hero = () => {
           <img
             src="/images/avatar.png"
             alt="avatar"
-            className="w-64 h-84 md:w-80 md:h-90 lg:w-[420px] lg:h-[420px] object-contain ml-34"
+            className="w-64 h-64 md:w-80 md:h-90 lg:w-[620px] lg:h-[620px] object-contain"
           />
         </div>
       </div>
