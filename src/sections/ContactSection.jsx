@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 const ContactSection = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -13,25 +14,57 @@ const ContactSection = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (status.message) {
+      setStatus({ type: "", message: "" });
+    }
     setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Show loading state
+    setStatus({ type: "", message: "" });
+
+    const serviceId =
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID ||
+      import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId =
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID ||
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey =
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY ||
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: "error",
+        message:
+          "Email service is not configured. Please add EmailJS environment variables.",
+      });
+      setLoading(false);
+      return;
+    }
 
     try {
       await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        publicKey,
       );
 
       // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
+      setStatus({
+        type: "success",
+        message: "Message sent successfully. I'll get back to you soon.",
+      });
     } catch (error) {
       console.error("EmailJS Error:", error); // Optional: show toast
+      setStatus({
+        type: "error",
+        message: "Failed to send message. Please try again in a moment.",
+      });
     } finally {
       setLoading(false); // Always stop loading, even on error
     }
@@ -79,10 +112,18 @@ const ContactSection = () => {
               required
             />
 
-            {/* ✅ BUTTON FIX */}
             <button type="submit" disabled={loading}>
               {loading ? "Sending..." : "Send"}
             </button>
+            {status.message && (
+              <p
+                className={`mt-3 text-sm ${
+                  status.type === "error" ? "text-red-600" : "text-green-700"
+                }`}
+              >
+                {status.message}
+              </p>
+            )}
           </form>
         </div>
 

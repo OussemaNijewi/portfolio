@@ -295,6 +295,10 @@ section {
         @apply inline-block;
       }
     }
+
+    button {
+      @apply w-full py-4 bg-black text-white font-semibold rounded-md flex justify-center items-center cursor-pointer transition-opacity duration-200 hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed;
+    }
   }
 
   .footer {
