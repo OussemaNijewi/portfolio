@@ -19,6 +19,10 @@ const navLinks = [
     link: "#work",
   },
   {
+    name: "Skills",
+    link: "#skills",
+  },
+  {
     name: "Contact me",
     link: "#contact",
   },
@@ -61,6 +65,14 @@ const logoIconsList = [
   {
     imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
   },
+];
+
+const techStackImgs = [
+  { name: "C++ / Unreal Engine", imgPath: "/images/UnrealEngine.svg" },
+  { name: "Android (AOSP)", imgPath: "/images/android-icon.svg" },
+  { name: "Node.js Backend", imgPath: "/images/node.svg" },
+  { name: "React Native", imgPath: "/images/react.svg" },
+  { name: "PostgreSQL Systems", imgPath: "/images/postgresql-logo.svg" },
 ];
 
 const expCards = [
@@ -136,4 +148,4 @@ const expCards = [
   },
 ];
 
-export { words, navLinks, logoIconsList, expCards };
+export { words, navLinks, logoIconsList, expCards, techStackImgs };
