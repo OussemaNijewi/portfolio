@@ -68,12 +68,17 @@ const logoIconsList = [
 ];
 
 const techStackImgs = [
-  { name: "Kotlin", imgPath: "/images/Kotlin.svg" },
-  { name: "GitHub", imgPath: "/images/github.svg" },
-  { name: "Jira", imgPath: "/images/atlassian_jira-icon.svg" },
+  { name: "Unreal Engine", imgPath: "/images/UnrealEngine.svg" },
   { name: "C++", imgPath: "/images/CppLogo.svg" },
   { name: "Android Auto", imgPath: "/images/Android_Auto_icon.svg" },
+  { name: "AOSP", imgPath: "/images/aosp.png" },
+  { name: "Kotlin", imgPath: "/images/Kotlin.svg" },
+  { name: "Node", imgPath: "/images/node.svg" },
+  { name: "React Native", imgPath: "/images/react.svg" },
   { name: "JavaScript", imgPath: "/images/js.svg" },
+  { name: "GitHub", imgPath: "/images/github.svg" },
+  { name: "Jira", imgPath: "/images/atlassian_jira-icon.svg" },
+  { name: "Confluence", imgPath: "/images/confluence.svg" },
 ];
 
 const expCards = [
