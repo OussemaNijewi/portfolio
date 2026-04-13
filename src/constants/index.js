@@ -1,12 +1,14 @@
+import { assetPath } from "../utils/assetPath";
+
 const words = [
-  { text: "Qt", imgPath: "/images/Qt.svg" },
-  { text: "Unreal Engine", imgPath: "/images/UnrealEngine.svg" },
-  { text: "C++", imgPath: "/images/CppLogo.svg" },
-  { text: "Android Auto", imgPath: "/images/Android_Auto_icon.svg" },
-  { text: "AOSP", imgPath: "/images/android-icon.svg" },
-  { text: "Kotlin", imgPath: "/images/Kotlin.svg" },
-  { text: "Git", imgPath: "/images/git-scm-icon.svg" },
-  { text: "Jira", imgPath: "/images/atlassian_jira-icon.svg" },
+  { text: "Qt", imgPath: assetPath("images/Qt.svg") },
+  { text: "Unreal Engine", imgPath: assetPath("images/UnrealEngine.svg") },
+  { text: "C++", imgPath: assetPath("images/CppLogo.svg") },
+  { text: "Android Auto", imgPath: assetPath("images/Android_Auto_icon.svg") },
+  { text: "AOSP", imgPath: assetPath("images/android-icon.svg") },
+  { text: "Kotlin", imgPath: assetPath("images/Kotlin.svg") },
+  { text: "Git", imgPath: assetPath("images/git-scm-icon.svg") },
+  { text: "Jira", imgPath: assetPath("images/atlassian_jira-icon.svg") },
 ];
 
 const navLinks = [
@@ -30,71 +32,71 @@ const navLinks = [
 
 const logoIconsList = [
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+    imgPath: assetPath("images/logos/company-ford-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+    imgPath: assetPath("images/logos/company-uottawa-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+    imgPath: assetPath("images/logos/company-ford-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+    imgPath: assetPath("images/logos/company-uottawa-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+    imgPath: assetPath("images/logos/company-ford-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+    imgPath: assetPath("images/logos/company-uottawa-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+    imgPath: assetPath("images/logos/company-ford-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+    imgPath: assetPath("images/logos/company-uottawa-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+    imgPath: assetPath("images/logos/company-ford-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+    imgPath: assetPath("images/logos/company-uottawa-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-ford-logo.png`,
+    imgPath: assetPath("images/logos/company-ford-logo.png"),
   },
   {
-    imgPath: `${import.meta.env.BASE_URL}images/logos/company-uottawa-logo.png`,
+    imgPath: assetPath("images/logos/company-uottawa-logo.png"),
   },
 ];
 
 const techStackImgs = [
-  { name: "Unreal Engine", imgPath: "/images/UnrealEngine.svg" },
-  { name: "C++", imgPath: "/images/CppLogo.svg" },
-  { name: "Android Auto", imgPath: "/images/Android_Auto_icon.svg" },
-  { name: "AOSP", imgPath: "/images/aosp.png" },
-  { name: "Kotlin", imgPath: "/images/Kotlin.svg" },
-  { name: "Node", imgPath: "/images/node.svg" },
-  { name: "React Native", imgPath: "/images/react.svg" },
-  { name: "JavaScript", imgPath: "/images/js.svg" },
-  { name: "GitHub", imgPath: "/images/github.svg" },
-  { name: "Jira", imgPath: "/images/atlassian_jira-icon.svg" },
-  { name: "Confluence", imgPath: "/images/confluence.svg" },
+  { name: "Unreal Engine", imgPath: assetPath("images/UnrealEngine.svg") },
+  { name: "C++", imgPath: assetPath("images/CppLogo.svg") },
+  { name: "Android Auto", imgPath: assetPath("images/Android_Auto_icon.svg") },
+  { name: "AOSP", imgPath: assetPath("images/aosp.png") },
+  { name: "Kotlin", imgPath: assetPath("images/Kotlin.svg") },
+  { name: "Node", imgPath: assetPath("images/node.svg") },
+  { name: "React Native", imgPath: assetPath("images/react.svg") },
+  { name: "JavaScript", imgPath: assetPath("images/js.svg") },
+  { name: "GitHub", imgPath: assetPath("images/github.svg") },
+  { name: "Jira", imgPath: assetPath("images/atlassian_jira-icon.svg") },
+  { name: "Confluence", imgPath: assetPath("images/confluence.svg") },
 ];
 const socialLinks = [
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/nijewi-oussema",
-    icon: "/images/linkedin.svg",
+    icon: assetPath("images/linkedin.svg"),
   },
   {
     name: "GitHub",
     link: "https://github.com/OussemaNijewi",
-    icon: "/images/github.svg",
+    icon: assetPath("images/github.svg"),
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/",
-    icon: "/images/instagram.svg",
+    icon: assetPath("images/instagram.svg"),
   },
 ];
 
@@ -102,10 +104,10 @@ const expCards = [
   {
     review:
       "Oussema brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    logoPath: `${import.meta.env.BASE_URL}images/logo1.png`,
+    logoPath: assetPath("images/logo1.png"),
     Tools: "Unreal Engine - Oculus Quest 2 - C++",
     company: "University of Ottawa",
-    modelPath: "/models/oculus_quest_2-transformed.glb",
+    modelPath: assetPath("models/oculus_quest_2-transformed.glb"),
     title: "Software Developer",
     scale: 6,
     rotation: [-0.3, 0.3, 0],
@@ -120,10 +122,10 @@ const expCards = [
   {
     review:
       "Oussema's contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    logoPath: `${import.meta.env.BASE_URL}images/logo2.png`,
+    logoPath: assetPath("images/logo2.png"),
     Tools: "Vehicle Infotainment (Android Auto - Java/Kotlin)",
     company: "Ford Motors Company of Canada",
-    modelPath: "/models/shelby_427_cobra-transformed.glb",
+    modelPath: assetPath("models/shelby_427_cobra-transformed.glb"),
     scale: 150,
     title: "Software Developer Intern/CO-OP",
     rotation: [0.4, 0.9, 0],
@@ -137,10 +139,10 @@ const expCards = [
   {
     review:
       "Oussema's work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    logoPath: `${import.meta.env.BASE_URL}images/logo2.png`,
+    logoPath: assetPath("images/logo2.png"),
     Tools: "Vehicle Infotainment (Unreal Engine - C++)",
     company: "Ford Motors Company of Canada",
-    modelPath: "/models/ford_mustang_gtd-transformed.glb",
+    modelPath: assetPath("models/ford_mustang_gtd-transformed.glb"),
     title: "Software Developer Intern/CO-OP",
     scale: 120,
     rotation: [0.4, 0.9, 0],
@@ -155,10 +157,10 @@ const expCards = [
   {
     review:
       "Oussema's work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    logoPath: `${import.meta.env.BASE_URL}images/logo2.png`,
+    logoPath: assetPath("images/logo2.png"),
     Tools: "Vehicle Infotainment (QT/QML - C++)",
     company: "Ford Motors Company of Canada",
-    modelPath: "/models/ford_gt-transformed.glb",
+    modelPath: assetPath("models/ford_gt-transformed.glb"),
     title: "Software Developer Intern/CO-OP",
     scale: 120,
     rotation: [0.4, 0.9, 0],
