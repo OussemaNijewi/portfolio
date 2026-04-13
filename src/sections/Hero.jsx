@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { words } from "../constants";
-import { assetPath } from "../utils/assetPath";
 
 const Hero = () => {
   useGSAP(() => {
@@ -15,7 +14,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src={assetPath("images/bg.png")} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/bg.png`} alt="" />
       </div>
       <div className="hero-layout relative z-10 flex flex-col md:flex-row items-center justify-between md:px-20 px-10 py-14 gap-5">
         {/* LEFT TEXT */}
@@ -54,7 +53,7 @@ const Hero = () => {
         {/* RIGHT AVATAR */}
         <div className="flex justify-center items-center md:w-1/2">
           <img
-            src={assetPath("images/avatar.png")}
+            src={`${import.meta.env.BASE_URL}images/avatar.png`}
             alt="avatar"
             className="w-64 h-64 md:w-80 md:h-90 lg:w-[620px] lg:h-[620px] object-contain"
           />
