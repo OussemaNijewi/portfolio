@@ -68,11 +68,12 @@ const logoIconsList = [
 ];
 
 const techStackImgs = [
-  { name: "C++ / Unreal Engine", imgPath: "/images/UnrealEngine.svg" },
-  { name: "Android (AOSP)", imgPath: "/images/android-icon.svg" },
-  { name: "Node.js Backend", imgPath: "/images/node.svg" },
-  { name: "React Native", imgPath: "/images/react.svg" },
-  { name: "PostgreSQL Systems", imgPath: "/images/postgresql-logo.svg" },
+  { imgPath: "/images/Kotlin.svg" },
+  { imgPath: "/images/github.svg" },
+  { imgPath: "/images/atlassian_jira-icon.svg" },
+  { imgPath: "/images/CppLogo.svg" },
+  { imgPath: "/images/Android_Auto_icon.svg" },
+  { imgPath: "/images/js.svg" },
 ];
 
 const expCards = [
