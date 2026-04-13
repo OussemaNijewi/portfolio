@@ -41,12 +41,17 @@ const TechStack = () => {
           {techStackImgs.map((techStackIcon, index) => (
             <div
               key={index}
-              className="card-border tech-card overflow-hidden xl:rounded-full rounded-lg !bg-white"
+              className="card-border tech-card overflow-hidden rounded-lg !bg-white"
             >
               <div className="tech-card-content">
                 <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="tech logo" />
+                  <img
+                    src={techStackIcon.imgPath}
+                    alt={techStackIcon.name}
+                    className="w-16 h-16 object-contain"
+                  />
                 </div>
+                <p>{techStackIcon.name}</p>
               </div>
             </div>
           ))}
