@@ -1,6 +1,42 @@
+import { useRef, useState } from "react";
 import { socialLinks } from "../constants";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
+  const formRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true); // Show loading state
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+      );
+
+      // Reset form and stop loading
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error); // Optional: show toast
+    } finally {
+      setLoading(false); // Always stop loading, even on error
+    }
+  };
+
   return (
     <section id="contact" className="contact-section section-padding">
       <div className="contact-layout">
@@ -11,17 +47,42 @@ const ContactSection = () => {
             I can.
           </p>
 
-          <form>
+          {/* ✅ CONNECT FORM */}
+          <form ref={formRef} onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={form.name}
+              onChange={handleChange}
+              required
+            />
 
             <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
 
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows="3" />
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              value={form.message}
+              onChange={handleChange}
+              required
+            />
 
-            <button type="button">Send</button>
+            {/* ✅ BUTTON FIX */}
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send"}
+            </button>
           </form>
         </div>
 
