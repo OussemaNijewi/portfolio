@@ -73,7 +73,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="contact-section section-padding">
       <div className="contact-layout">
-        <div className="ml-20">
+        <div className="md:ml-20">
           <h2 className="mt-10">Contact Me</h2>
           <p className="mb-10">
             Please feel free to contact me and I will get back to you as soon as
@@ -127,7 +127,7 @@ const ContactSection = () => {
           </form>
         </div>
 
-        <aside className="contact-info ml-39 mt-6">
+        <aside className="contact-info md:ml-39 mt-6">
           <h3>Location</h3>
           <p>Canada, Ontario</p>
           <p className="mb-10">in-person & remote</p>
