@@ -485,3 +485,54 @@ section {
 .hero-subtext {
   @apply text-sm md:text-lg text-black-200 mt-2;
 }
+
+.contact-section {
+  @apply mb-20;
+}
+
+.contact-layout {
+  @apply border border-black/20 rounded-xl p-6 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white;
+
+  h2 {
+    @apply text-5xl md:text-7xl font-medium text-black;
+    font-family: "Times New Roman", serif;
+  }
+
+  p {
+    @apply mt-1 text-black/80 max-w-md;
+  }
+}
+
+.contact-section form {
+  @apply mt-10;
+
+  label {
+    @apply block text-black mb-2;
+  }
+
+  input,
+  textarea {
+    @apply w-full px-0 py-3 bg-transparent border-b border-black/40 rounded-none focus:outline-none;
+  }
+
+  button {
+    @apply mt-6 w-full md:w-full py-3 bg-black text-white font-medium mb-10;
+  }
+}
+
+.contact-info {
+  @apply lg:pt-48;
+
+  h3 {
+    @apply text-3xl text-black;
+    font-family: "Times New Roman", serif;
+  }
+}
+
+.social-links {
+  @apply mt-6 flex items-center gap-5 text-black;
+
+  a {
+    @apply transition-transform hover:scale-110;
+  }
+}

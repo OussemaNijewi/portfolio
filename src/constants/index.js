@@ -80,6 +80,23 @@ const techStackImgs = [
   { name: "Jira", imgPath: "/images/atlassian_jira-icon.svg" },
   { name: "Confluence", imgPath: "/images/confluence.svg" },
 ];
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/nijewi-oussema",
+    icon: "/images/linkedin.svg",
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/OussemaNijewi",
+    icon: "/images/github.svg",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/",
+    icon: "/images/instagram.svg",
+  },
+];
 
 const expCards = [
   {
@@ -154,4 +171,4 @@ const expCards = [
   },
 ];
 
-export { words, navLinks, logoIconsList, expCards, techStackImgs };
+export { words, navLinks, logoIconsList, expCards, techStackImgs, socialLinks };

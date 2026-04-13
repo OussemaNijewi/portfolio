@@ -22,7 +22,7 @@ const Hero = () => {
           <p className="hero-title">Hi, I’m Oussema. </p>
 
           <p className="hero-body">
-            I’m a Software Engineering graduate from the University of Ottawa
+            I’m a software engineering graduate from the University of Ottawa
             that spent the last few years deep in the world of automotive tech
             at Ford Motors. From embedded systems to building interactive
             infotainment experiences with
@@ -46,7 +46,7 @@ const Hero = () => {
 
           <p className="hero-subtext max-w-xl">
             Curious by nature, I’m always exploring how things work and how to
-            make them better. Nice to meet you!
+            make them better. 
           </p>
         </div>
 
