@@ -4,7 +4,6 @@ import { socialLinks } from "../constants";
 const ContactSection = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -18,36 +17,22 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setStatus("");
+    setLoading(true); // Show loading state
 
     try {
-      const { default: emailjs } = await import("@emailjs/browser");
-
-      const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
-
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error(
-          "Missing EmailJS environment variables. Check your .env values.",
-        );
-      }
-
       await emailjs.sendForm(
-        serviceId,
-        templateId,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        publicKey,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       );
 
+      // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
-      setStatus("Message sent successfully.");
     } catch (error) {
-      console.error("EmailJS Error:", error);
-      setStatus("Failed to send. Please verify EmailJS package and .env keys.");
+      console.error("EmailJS Error:", error); // Optional: show toast
     } finally {
-      setLoading(false);
+      setLoading(false); // Always stop loading, even on error
     }
   };
 
@@ -93,11 +78,9 @@ const ContactSection = () => {
               required
             />
 
-            {/* ✅ BUTTON FIX */}
-            <button type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send"}
+            <button type="submit">
+              <p className="text">{loading ? "Sending..." : "Send Message"}</p>
             </button>
-            {status && <p className="mt-3 text-sm">{status}</p>}
           </form>
         </div>
 
