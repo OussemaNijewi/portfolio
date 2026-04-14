@@ -46,12 +46,7 @@ const ContactSection = () => {
     }
 
     try {
-      await emailjs.sendForm(
-        serviceId,
-        templateId,
-        formRef.current,
-        publicKey,
-      );
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
 
       // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
@@ -92,7 +87,9 @@ const ContactSection = () => {
               required
             />
 
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="pt-5">
+              Email
+            </label>
             <input
               id="email"
               name="email"
@@ -102,7 +99,9 @@ const ContactSection = () => {
               required
             />
 
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="pt-5">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
