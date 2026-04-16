@@ -88,10 +88,14 @@ const AppShowcase = () => {
             <div className="project-list-wrapper overflow-hidden pb-6">
               <div className="project" ref={libraryRef}>
                 <div className="image-wrapper bg-[#FFEFDB]">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/project2.png`}
-                    alt="Library Management Platform"
-                  />
+                  <iframe
+                    className="w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/_c50-OWGoiI"
+                    title="Sleep Sentinel App Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 <a
                   href="https://github.com/orgs/SleepSentinel/repositories"
@@ -110,7 +114,10 @@ const AppShowcase = () => {
 
               <div className="project" ref={ycDirectoryRef}>
                 <div className="image-wrapper bg-[#FFE7EB]">
-                  <img src={`${import.meta.env.BASE_URL}images/project3.png`} alt="YC Directory App" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/project3.png`}
+                    alt="YC Directory App"
+                  />
                 </div>
                 <a
                   href="https://github.com/OussemaNijewi/KineQuest"
