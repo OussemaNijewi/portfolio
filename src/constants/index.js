@@ -1,13 +1,27 @@
-
 const words = [
   { text: "Qt", imgPath: `${import.meta.env.BASE_URL}images/Qt.svg` },
-  { text: "Unreal Engine", imgPath: `${import.meta.env.BASE_URL}images/UnrealEngine.svg` },
+  {
+    text: "Unreal Engine",
+    imgPath: `${import.meta.env.BASE_URL}images/UnrealEngine.svg`,
+  },
   { text: "C++", imgPath: `${import.meta.env.BASE_URL}images/CppLogo.svg` },
-  { text: "Android Auto", imgPath: `${import.meta.env.BASE_URL}images/Android_Auto_icon.svg` },
-  { text: "AOSP", imgPath: `${import.meta.env.BASE_URL}images/android-icon.svg` },
+  {
+    text: "Android Auto",
+    imgPath: `${import.meta.env.BASE_URL}images/Android_Auto_icon.svg`,
+  },
+  {
+    text: "AOSP",
+    imgPath: `${import.meta.env.BASE_URL}images/android-icon.svg`,
+  },
   { text: "Kotlin", imgPath: `${import.meta.env.BASE_URL}images/Kotlin.svg` },
-  { text: "Git", imgPath: `${import.meta.env.BASE_URL}images/git-scm-icon.svg` },
-  { text: "Jira", imgPath: `${import.meta.env.BASE_URL}images/atlassian_jira-icon.svg` },
+  {
+    text: "Git",
+    imgPath: `${import.meta.env.BASE_URL}images/git-scm-icon.svg`,
+  },
+  {
+    text: "Jira",
+    imgPath: `${import.meta.env.BASE_URL}images/atlassian_jira-icon.svg`,
+  },
 ];
 
 const navLinks = [
@@ -69,17 +83,32 @@ const logoIconsList = [
 ];
 
 const techStackImgs = [
-  { name: "Unreal Engine", imgPath: `${import.meta.env.BASE_URL}images/UnrealEngine.svg` },
+  {
+    name: "Unreal Engine",
+    imgPath: `${import.meta.env.BASE_URL}images/UnrealEngine.svg`,
+  },
   { name: "C++", imgPath: `${import.meta.env.BASE_URL}images/CppLogo.svg` },
-  { name: "Android Auto", imgPath: `${import.meta.env.BASE_URL}images/Android_Auto_icon.svg` },
+  {
+    name: "Android Auto",
+    imgPath: `${import.meta.env.BASE_URL}images/Android_Auto_icon.svg`,
+  },
   { name: "AOSP", imgPath: `${import.meta.env.BASE_URL}images/aosp.png` },
   { name: "Kotlin", imgPath: `${import.meta.env.BASE_URL}images/Kotlin.svg` },
   { name: "Node", imgPath: `${import.meta.env.BASE_URL}images/node.svg` },
-  { name: "React Native", imgPath: `${import.meta.env.BASE_URL}images/react.svg` },
+  {
+    name: "React Native",
+    imgPath: `${import.meta.env.BASE_URL}images/react.svg`,
+  },
   { name: "JavaScript", imgPath: `${import.meta.env.BASE_URL}images/js.svg` },
   { name: "GitHub", imgPath: `${import.meta.env.BASE_URL}images/github.svg` },
-  { name: "Jira", imgPath: `${import.meta.env.BASE_URL}images/atlassian_jira-icon.svg` },
-  { name: "Confluence", imgPath: `${import.meta.env.BASE_URL}images/confluence.svg` },
+  {
+    name: "Jira",
+    imgPath: `${import.meta.env.BASE_URL}images/atlassian_jira-icon.svg`,
+  },
+  {
+    name: "Confluence",
+    imgPath: `${import.meta.env.BASE_URL}images/confluence.svg`,
+  },
 ];
 const socialLinks = [
   {
@@ -107,15 +136,15 @@ const expCards = [
     Tools: "Unreal Engine - Oculus Quest 2 - C++",
     company: "University of Ottawa",
     modelPath: `${import.meta.env.BASE_URL}models/oculus_quest_2-transformed.glb`,
-    title: "Software Developer",
+    title: "Software Developer / Work Study Program",
     scale: 6,
     rotation: [-0.3, 0.3, 0],
     date: "May 2025 - October 2025",
     responsibilities: [
-      "Developed a standalone VR app using Unreal Engine (C++) targeting Oculus Quest 2 (Android APK) for the Faculty of Human Kinetics to simulate a Sensory Processing lab.",
-      "Implemented real-time controller and arm motion tracking using Quest 2 input hardware tracking angles with less than 2° margin of error, providing students with precise data.",
-      "Designed and implemented a data logging pipeline, serializing data to JSON and securely transmitting it via HTTPS from the headset to a Node.js server.",
-      "Implemented a backend service that receives uploaded serialized data, processes and formats it, and delivers results to the corresponding user email.",
+      "Developed a VR app for Oculus Quest 2 to simulate proprioception reflex experiments with guided user interactions.",
+      "Implemented 3D vector-based kinematic calculations using controller and joint coordinates to measure arm movement angles (within 2° error).",
+      "Designed a checkpoints system to manage game session progress across multiple trial conditions (visual aid vs non-visual aid, dominant vs non-dominant arm, timed delays).",
+      "Stored experiment data in C++ structs and generated formatted email reports sent to users using the EasyMail Unreal Engine plugin.",
     ],
   },
   {
@@ -126,13 +155,13 @@ const expCards = [
     company: "Ford Motors Company of Canada",
     modelPath: `${import.meta.env.BASE_URL}models/shelby_427_cobra-transformed.glb`,
     scale: 150,
-    title: "Software Developer Intern/CO-OP",
+    title: "Software Developer Intern / CO-OP",
     rotation: [0.4, 0.9, 0],
     date: "May 2024 - August 2024",
     responsibilities: [
-      "Implemented UI components for the Setup Wizard App guiding users through first-time vehicle configuration (account setup, preferences, and system customization).",
-      "Implemented screen-by-screen workflow logic, customizing AOSP Setup Wizard flows to deliver a Ford-branded user experience aligned with internal Figma designs.",
-      "Implemented unit tests increasing code coverage from 0% to 62% tracked using SonarQube.",
+      "Implemented UI components for driver account setup, improving users onboarding experience.",
+      "Implemented unit tests using JUnit, achieving 80% code coverage tracked with SonarQube.",
+      "Identified codebase maintainability issues during unit testing and proposed a refactoring initiative, which was approved and assigned to me as a dedicated internship project",
     ],
   },
   {
@@ -142,15 +171,15 @@ const expCards = [
     Tools: "Vehicle Infotainment (Unreal Engine - C++)",
     company: "Ford Motors Company of Canada",
     modelPath: `${import.meta.env.BASE_URL}models/ford_mustang_gtd-transformed.glb`,
-    title: "Software Developer Intern/CO-OP",
+    title: "Software Developer Intern / CO-OP",
     scale: 120,
     rotation: [0.4, 0.9, 0],
     date: "May 2023 - December 2023",
     responsibilities: [
-      "Refactored blueprint logic to C++ to improve maintainability and performance.",
-      "Fixed a critical input bug where button presses were not canceled when a user slid their finger outside the button bounds by modifying finger capture logic preventing unintended click events.",
-      "Debugged and fixed floating-point precision errors in lap time display caused by conversion and rounding issues, eliminating rounding inconsistencies of ±1 ms.",
-      "Supported the final release of the MyMustang app by debugging production issues and refactoring systems for improved maintainability.",
+      "Refactored blueprint graphs to C++ to improve runtime performance.",
+      "Resolved a critical input handling bug where button presses were not canceled when touch capture exited button bounds, preventing unintended click events.",
+      "Debugged floating-point precision errors in lap time display caused by conversion and rounding errors, eliminating ±1 ms inconsistencies.",
+      "Supported the final release of the MyMustang app by debugging production issues and refactoring code to improve code maintainability.",
     ],
   },
   {
@@ -160,14 +189,14 @@ const expCards = [
     Tools: "Vehicle Infotainment (QT/QML - C++)",
     company: "Ford Motors Company of Canada",
     modelPath: `${import.meta.env.BASE_URL}models/ford_gt-transformed.glb`,
-    title: "Software Developer Intern/CO-OP",
+    title: "Software Developer Intern / CO-OP",
     scale: 120,
     rotation: [0.4, 0.9, 0],
     date: "September 2022 - April 2023",
     responsibilities: [
-      "Resolved customer-reported localization defects in production infotainment systems UIs by updating translation resources and correcting string formatting.",
-      "Updated UI assets to meet new design requirements, maintaining visual consistency across the deployed infotainment systems.",
-      "Contributed to the maintenance of a legacy project, learning Agile/Scrum workflows, build processes, debugging techniques, and version control in a large code-base.",
+      "Resolved customer-reported localization defects by correcting translation strings and fixing formatting issues.",
+      "Updated UI components to align with new design requirements, ensuring visual consistency.",
+      "Contributed to maintenance of a legacy codebase, working within Agile/Scrum workflows while debugging issues and using version control in a large-scale environment.",
     ],
   },
 ];
